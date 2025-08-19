@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Sports Buddy</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar admin-sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="nav-brand">
+            <i class="fas fa-running brand-icon"></i>
+            <span class="brand-text">Sports Buddy</span>
+            <span class="admin-badge">Admin</span>
+          </div>
+          <button class="sidebar-toggle" id="sidebar-toggle">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active" data-section="dashboard">
+            <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+          </a>
+          <a href="#" class="nav-item" data-section="events">
+            <i class="fas fa-calendar-alt"></i><span>Manage Events</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <button class="logout-btn" id="logout-btn">
+            <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+          <div class="header-left">
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="page-title" id="page-title">Admin Dashboard</h1>
+          </div>
+          <div class="header-right">
+            <div class="admin-profile">
+              <i class="fas fa-user-shield admin-icon"></i>
+              <span class="admin-name" id="admin-name">Admin</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- Dashboard Overview -->
+          <section id="dashboard-section" class="content-section active">
+            <div class="admin-stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-info">
+                  <h3 class="stat-number" id="total-users">0</h3>
+                  <p class="stat-label">Total Users</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="stat-info">
+                  <h3 class="stat-number" id="total-events">0</h3>
+                  <p class="stat-label">Total Events</p>
+                </div>
+              </div>
+            </div>
+            <div class="admin-grid">
+              <div class="dashboard-card">
+                <div class="card-header"><h3>Recent Activities</h3></div>
+                <div class="recent-activities" id="recent-activities"></div>
+              </div>
+              <div class="dashboard-card">
+                <div class="card-header"><h3>System Status</h3></div>
+                <div class="system-status">
+                  <div class="status-item">
+                    <span class="status-label">Database</span>
+                    <span class="status-value online">Online</span>
+                  </div>
+                  <div class="status-item">
+                    <span class="status-label">Authentication</span>
+                    <span class="status-value online">Online</span>
+                  </div>
+                  <div class="status-item">
+                    <span class="status-label">Storage</span>
+                    <span class="status-value online">Online</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Events Section -->
+          <section id="events-section" class="content-section">
+            <div class="section-header">
+              <h2>Manage Events</h2>
+              <!-- <button class="btn btn-primary" id="add-event-btn">
+                <i class="fas fa-plus"></i><span>Add Event</span>
+              </button> -->
+            </div>
+            <div class="data-table-container">
+              <!-- <div class="table-filters">
+                <div class="search-box">
+                  <i class="fas fa-search"></i>
+                  <input
+                    type="text"
+                    id="events-search"
+                    placeholder="Search events..."
+                  />
+                </div>
+                <div class="filter-select">
+                  <select id="filter-sport">
+                    <option value="">All Sports</option>
+                  </select>
+                </div>
+                <div class="filter-select">
+                  <select id="filter-city">
+                    <option value="">All Cities</option>
+                  </select>
+                </div>
+                <input type="date" id="filter-date" />
+              </div> -->
+              <table class="data-table" id="events-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Event</th>
+                    <th>Sport</th>
+                    <th>City</th>
+                    <th>Area</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody id="events-tbody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Users Section -->
+          <section id="users-section" class="content-section">
+            <div class="section-header">
+              <h2>Manage Users</h2>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Full Name / Email</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="users-tbody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Event Edit Section (new) -->
+          <section id="eventEdit-section" class="content-section">
+            <!-- 1) Section header—matches all your other pages -->
+            <div class="section-header">
+              <div>
+                <h2 id="event-modal-title">Add Event</h2>
+              </div>
+              <!-- 2) “Back” button to return to Events list -->
+              <button class="btn btn-secondary" id="back-to-events">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Events</span>
+              </button>
+            </div>
+
+            <!-- 3) Body just holds the form (no extra overlay wrapper) -->
+            <div class="section-body">
+              <form id="event-form">
+                <input type="hidden" id="event-id" name="id" />
+
+                <div class="form-group">
+                  <label for="event-name">Title</label>
+                  <input type="text" id="event-name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="event-sport">Sport</label>
+                  <select id="event-sport" name="sport" required></select>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-city">City</label>
+                  <select id="event-city" name="city" required></select>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-area">Area</label>
+                  <select id="event-area" name="area" required></select>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-date">Date</label>
+                  <input type="date" id="event-date" name="date" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="event-time">Time</label>
+                  <input type="time" id="event-time" name="time" />
+                </div>
+
+                <div class="form-group">
+                  <label for="event-skill">Skill Level</label>
+                  <select id="event-skill" name="skillLevel">
+                    <option value="">Select Level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="professional">Professional</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-max">Max Participants</label>
+                  <input type="number" id="event-max" name="maxParticipants" />
+                </div>
+
+                <div class="form-group">
+                  <label for="event-description">Description</label>
+                  <textarea
+                    id="event-description"
+                    name="description"
+                  ></textarea>
+                </div>
+
+                <!-- Final Save/Cancel buttons use the same .form-actions as other sections -->
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="cancel-event"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- Loading Overlay & Notification -->
+    <div id="loading-overlay" class="loading-overlay">
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div id="notification" class="notification"></div>
+
+    <!-- Scripts -->
+    <!-- Correct Order -->
+    <script type="module" src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/modules/logger.js"></script>
+    <script src="assets/js/modules/utils.js"></script>
+    <script type="module" src="assets/js/modules/auth.js"></script>
+    <script type="module" src="assets/js/modules/admin.js"></script>
+    <script type="module" src="assets/js/modules/events.js"></script>
+    <!-- ✅ must be here -->
+    <script src="assets/js/admin-dashboard.js"></script>
+    <!-- ✅ this goes last -->
+  </body>
+</html>

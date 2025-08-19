@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Buddy - Find Your Perfect Sports Partner</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <i class="fas fa-running brand-icon"></i>
+          <span class="brand-text">Sports Buddy</span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <!-- <a href="#home" class="nav-link">Home</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#sports" class="nav-link">Sports</a>
+          <a href="#about" class="nav-link">About</a> -->
+          <div class="nav-auth">
+            <a href="login.html" class="btn btn-outline-2">Login</a>
+            <a href="register.html" class="btn btn-primary">Sign Up</a>
+          </div>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Find Your Perfect <span class="text-gradient">Sports Partner</span>
+          </h1>
+          <p class="hero-subtitle">
+            Connect with millions of sports enthusiasts worldwide. Discover new
+            friends, improve your skills, and enjoy your favorite sports
+            together.
+          </p>
+          <div class="hero-cta">
+            <a href="register.html" class="btn btn-primary btn-large">
+              <i class="fas fa-play"></i>
+              Get Started
+            </a>
+            <!-- <a href="#features" class="btn btn-secondary btn-large">
+              <i class="fas fa-info-circle"></i>
+              Learn More
+            </a> -->
+          </div>
+          <!-- <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">2M+</span>
+              <span class="stat-label">Active Users</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Sports Categories</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Cities Covered</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <!-- <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Sports Buddy?</h2>
+                <p class="section-subtitle">
+                    Discover the features that make us the world's largest sports matching platform
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Matching</h3>
+                    <p class="feature-description">
+                        Our advanced algorithm matches you with players based on skill level, location, and preferences.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Location-Based</h3>
+                    <p class="feature-description">
+                        Find sports events and partners near your location or while traveling to new cities.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="feature-title">50+ Sports</h3>
+                    <p class="feature-description">
+                        From football to tennis, basketball to swimming - find partners for any sport you love.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Safe & Secure</h3>
+                    <p class="feature-description">
+                        Verified profiles and secure messaging ensure safe interactions with fellow sports enthusiasts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Sports Section -->
+    <!-- <section id="sports" class="sports">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Sports</h2>
+                <p class="section-subtitle">
+                    Join millions of players in these popular sports categories
+                </p>
+            </div>
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 class="sport-name">Football</h3>
+                    <p class="sport-players">1.2M+ Players</p>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3 class="sport-name">Basketball</h3>
+                    <p class="sport-players">800K+ Players</p>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <i class="fas fa-table-tennis"></i>
+                    </div>
+                    <h3 class="sport-name">Tennis</h3>
+                    <p class="sport-players">600K+ Players</p>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <i class="fas fa-swimmer"></i>
+                    </div>
+                    <h3 class="sport-name">Swimming</h3>
+                    <p class="sport-players">400K+ Players</p>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="sport-name">Running</h3>
+                    <p class="sport-players">900K+ Players</p>
+                </div>
+                <div class="sport-card">
+                    <div class="sport-image">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3 class="sport-name">Cycling</h3>
+                    <p class="sport-players">500K+ Players</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="nav-brand">
+              <i class="fas fa-running brand-icon"></i>
+              <span class="brand-text">Sports Buddy</span>
+            </div>
+            <p class="footer-description">
+              The world's largest sports matching platform. Connect, play, and
+              grow your network.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Platform</h4>
+              <!-- <a href="#features">Features</a>
+              <a href="#sports">Sports</a> -->
+              <a href="register.html">Sign Up</a>
+              <a href="login.html">Login</a>
+            </div>
+            <div class="footer-column">
+              <h4>Support</h4>
+              <a href="#help">Help Center</a>
+              <a href="#contact">Contact Us</a>
+              <a href="#privacy">Privacy Policy</a>
+              <a href="#terms">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Sports Buddy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <!-- <div id="loading-overlay" class="loading-overlay">
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading...</p>
+      </div>
+    </div> -->
+
+    <script src="assets/js/modules/logger.js"></script>
+    <script src="assets/js/modules/utils.js"></script>
+    <script src="assets/js/home.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Beacon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-50: rgb(218, 203, 255);
+  --brand-100: rgb(186, 162, 242);
+  --brand-200: rgb(154, 131, 230);
+  --brand-300: rgb(138, 111, 214);
+  --brand-400: rgb(107, 78, 189);
+  --brand-500: rgb(83, 58, 153);
+  --brand-600: rgb(58, 31, 93);
+  --brand-700: rgb(45, 22, 77);
+  --brand-800: rgb(30, 11, 44);
+  --brand-900: rgb(18, 5, 28);
+  
+  --neutral-0: rgb(255, 255, 255);
+  --neutral-50: rgb(240, 235, 255);
+  --neutral-100: rgb(225, 215, 245);
+  --neutral-200: rgb(200, 185, 230);
+  --neutral-900: rgb(30, 11, 44);
+  --neutral-950: rgb(18, 5, 28);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--neutral-50);
+  overflow-x: hidden;
+  background-color: var(--brand-900);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+/* Improved Glassmorphic Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, rgba(30, 11, 44, 0.3), rgba(58, 31, 93, 0.2));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(138, 111, 214, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.75rem 2rem;
+  background: rgba(18, 5, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(138, 111, 214, 0.3);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-300));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 15px rgba(138, 111, 214, 0.5);
+}
+
+.logo svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--neutral-50);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--brand-300), var(--brand-200));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--neutral-0);
+}
+
+.nav-link.active {
+  color: var(--neutral-0);
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.btn-connect {
+  background: rgba(138, 111, 214, 0.15);
+  color: var(--neutral-0);
+  border: 1px solid rgba(138, 111, 214, 0.3);
+}
+
+.btn-connect:hover {
+  background: rgba(138, 111, 214, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(138, 111, 214, 0.2);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--neutral-0);
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(30, 11, 44, 0.95), rgba(18, 5, 28, 0.98));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 99;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(138, 111, 214, 0.2);
+}
+
+.mobile-nav.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mobile-connect {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/images/2958.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(18, 5, 28, 0.7), rgba(45, 22, 77, 0.6));
+  z-index: 1;
+}
+
+.cosmic-effects {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 25% 15%, white, transparent),
+    radial-gradient(1px 1px at 50% 40%, white, transparent),
+    radial-gradient(2px 2px at 15% 55%, white, transparent),
+    radial-gradient(1.5px 1.5px at 75% 70%, white, transparent),
+    radial-gradient(1px 1px at 35% 85%, white, transparent),
+    radial-gradient(1.5px 1.5px at 65% 20%, white, transparent);
+  opacity: 0.4;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(138, 111, 214, 0.4) 0%, transparent 70%);
+  filter: blur(30px);
+  opacity: 0.7;
+  animation: pulse 6s infinite alternate;
+}
+
+.glow-1 {
+  top: 25%;
+  left: 25%;
+  width: 300px;
+  height: 300px;
+}
+
+.glow-2 {
+  bottom: 30%;
+  right: 30%;
+  width: 200px;
+  height: 200px;
+  animation-delay: 3s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.3);
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 3;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: white;
+  letter-spacing: -0.04em;
+  text-shadow: 0 0 20px rgba(138, 111, 214, 0.8);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  animation: fadeIn 1.5s ease-out 0.5s both;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  animation: fadeIn 1.5s ease-out 1s both;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand-400), var(--brand-500));
+  color: white;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 4px 12px rgba(83, 58, 153, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(83, 58, 153, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 0.75rem 2rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .logo-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .mobile-nav {
+    display: flex;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+  
+  .glow-1 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .glow-2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .btn-connect {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <i data-feather="anchor"></i>
+        </div>
+        <div class="nav-links desktop-nav">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#" class="nav-link">About</a>
+          <a href="#" class="nav-link">Contact</a>
+        </div>
+      </div>
+      <button class="btn btn-connect">Connect</button>
+      <button class="mobile-menu-btn">
+        <i data-feather="menu"></i>
+      </button>
+    </nav>
+    
+    <div class="mobile-nav">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Contact</a>
+      <button class="btn btn-connect mobile-connect">Connect</button>
+    </div>
+
+    <section class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="cosmic-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="stars"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">COSMIC BEACON</h1>
+        <p class="hero-subtitle">Illuminating the path through the celestial seas</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">Explore</button>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Initialize Feather icons
+    feather.replace();
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html> -->

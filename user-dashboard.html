@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Sports Buddy</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="nav-brand">
+            <i class="fas fa-running brand-icon"></i>
+            <span class="brand-text">Sports Buddy</span>
+          </div>
+          <button class="sidebar-toggle" id="sidebar-toggle">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#dashboard" class="nav-item active" data-section="dashboard">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#events" class="nav-item" data-section="events">
+            <i class="fas fa-calendar-alt"></i>
+            <span>My Events</span>
+          </a>
+          <!-- <a href="#matches" class="nav-item" data-section="matches">
+            <i class="fas fa-users"></i>
+            <span>Matches</span>
+          </a>
+          <a href="#profile" class="nav-item" data-section="profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+          </a> -->
+        </nav>
+
+        <div class="sidebar-footer">
+          <button class="logout-btn" id="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+          <div class="header-left">
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="page-title" id="page-title">Dashboard</h1>
+          </div>
+          <div class="header-right">
+            <div class="user-profile">
+              <!-- Optional avatar -->
+              <!-- <img src="/placeholder.svg" class="user-avatar" id="user-avatar" alt="Avatar"> -->
+              <span class="user-name" id="user-name">Loading...</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+          <!-- Dashboard Overview Section -->
+          <section id="dashboard-section" class="content-section active">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="stat-info">
+                  <h3 class="stat-number" id="total-events">0</h3>
+                  <p class="stat-label">My Events</p>
+                </div>
+              </div>
+              <!-- <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-info">
+                  <h3 class="stat-number" id="total-matches">0</h3>
+                  <p class="stat-label">Matches Found</p>
+                </div>
+              </div> -->
+              <!-- <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                <div class="stat-info">
+                  <h3 class="stat-number" id="total-sports">0</h3>
+                  <p class="stat-label">Sports Played</p>
+                </div>
+              </div> -->
+              <!-- <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-star"></i></div>
+                <div class="stat-info">
+                  <h3 class="stat-number" id="rating">0.0</h3>
+                  <p class="stat-label">Rating</p>
+                </div>
+              </div> -->
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+              <!-- Recent Events -->
+              <div class="dashboard-card">
+                <!-- <div class="card-header">
+                  <h3>Recent Events</h3>
+                  <a href="#events" class="view-all-link">View All</a>
+                </div> -->
+                <div class="card-body" id="recent-events">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <!-- Suggested Matches -->
+              <!-- <div class="dashboard-card">
+                <div class="card-header">
+                  <h3>Suggested Matches</h3>
+                  <a href="#matches" class="view-all-link">View All</a>
+                </div>
+                <div class="card-body" id="suggested-matches">
+                </div>
+              </div> -->
+            </div>
+          </section>
+
+          <!-- Events Section -->
+          <section id="events-section" class="content-section">
+            <div class="section-header">
+              <h2>My Sports Events</h2>
+              <!-- <button class="btn btn-primary" data-section="create-event">
+                <i class="fas fa-plus"></i> Create New Event
+              </button> -->
+              <a
+                href="#create-event"
+                class="nav-item"
+                style="background-color: black; color: white;"
+                data-section="create-event"
+              >
+                <i class="fas fa-plus-circle"></i>
+                <span>Create Event</span>
+              </a>
+            </div>
+
+            <!-- <div class="events-filters">
+              <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                  All Events
+                </button>
+                <button class="filter-btn" data-filter="upcoming">
+                  Upcoming
+                </button>
+                <button class="filter-btn" data-filter="past">Past</button>
+              </div>
+              <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  placeholder="Search events..."
+                  id="events-search"
+                />
+              </div>
+            </div> -->
+
+            <div class="events-grid" id="events-grid">
+              <!-- Loaded via JS -->
+            </div>
+          </section>
+
+          <!-- Create Event Section -->
+          <section id="create-event-section" class="content-section">
+            <div class="section-header">
+              <h2>Create Sports Event</h2>
+              <p>Connect with fellow sports enthusiasts in your area</p>
+            </div>
+
+            <form id="create-event-form" class="event-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="event-title" class="form-label">
+                    <i class="fas fa-heading"></i> Event Title
+                  </label>
+                  <input
+                    type="text"
+                    id="event-title"
+                    name="title"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="event-sport" class="form-label">
+                    <i class="fas fa-futbol"></i> Sport Category
+                  </label>
+                  <select
+                    id="event-sport"
+                    name="sport"
+                    class="form-input"
+                    required
+                  >
+                    <option value="">Select Sport</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="event-description" class="form-label">
+                  <i class="fas fa-align-left"></i> Description
+                </label>
+                <textarea
+                  id="event-description"
+                  name="description"
+                  class="form-input"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="event-date" class="form-label">
+                    <i class="fas fa-calendar"></i> Date
+                  </label>
+                  <input
+                    type="date"
+                    id="event-date"
+                    name="date"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="event-time" class="form-label">
+                    <i class="fas fa-clock"></i> Time
+                  </label>
+                  <input
+                    type="time"
+                    id="event-time"
+                    name="time"
+                    class="form-input"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="event-city" class="form-label">
+                    <i class="fas fa-map-marker-alt"></i> City
+                  </label>
+                  <select
+                    id="event-city"
+                    name="city"
+                    class="form-input"
+                    required
+                  >
+                    <option value="">Select City</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-area" class="form-label">
+                    <i class="fas fa-location-arrow"></i> Area
+                  </label>
+                  <select
+                    id="event-area"
+                    name="area"
+                    class="form-input"
+                    required
+                  >
+                    <option value="">Select Area</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="skill-level" class="form-label">
+                    <i class="fas fa-signal"></i> Skill Level
+                  </label>
+                  <select
+                    id="skill-level"
+                    name="skillLevel"
+                    class="form-input"
+                    required
+                  >
+                    <option value="">Select Level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                    <option value="professional">Professional</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="max-participants" class="form-label">
+                    <i class="fas fa-users"></i> Max Participants
+                  </label>
+                  <input
+                    type="number"
+                    id="max-participants"
+                    name="maxParticipants"
+                    class="form-input"
+                    min="2"
+                    max="50"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="cancel-event"
+                >
+                  <i class="fas fa-times"></i> Cancel
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-plus-circle"></i> Create Event
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Matches & Profile sections can follow same structure -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Overlays and Modals -->
+    <div id="loading-overlay" class="loading-overlay">
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <div id="event-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title">Event Details</h3>
+          <button class="modal-close" id="modal-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Event details injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JS Modules -->
+    <script type="module" src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/modules/logger.js"></script>
+    <script src="assets/js/modules/utils.js"></script>
+    <script type="module" src="assets/js/modules/auth.js"></script>
+    <script type="module" src="assets/js/modules/events.js"></script>
+    <script src="assets/js/user-dashboard.js"></script>
+  </body>
+</html>
