@@ -1,6 +1,8 @@
      Web Development Project Report
 Project Title: Sports Buddy - Find Your Perfect Sports Partner
+
 Developer: Mayuri Kawade
+
 Duration: June 2025 – August 2025
 
 1. Introduction
